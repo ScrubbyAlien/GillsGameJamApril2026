@@ -1,8 +1,11 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
+    public event Action Interact;
+
     [SerializeField]
     private Rigidbody2D body;
 
@@ -49,6 +52,11 @@ public class PlayerController : MonoBehaviour
         {
             if (body.linearVelocityY is > 0) body.linearVelocityY *= jumpCancelledBreakFactor;
         }
+    }
+
+    public void OnInteract()
+    {
+        Interact?.Invoke();
     }
 
     private void FixedUpdate()
