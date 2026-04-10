@@ -110,7 +110,7 @@ GameObject:
   - component: {fileID: 1539730838596096816}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -185,7 +185,7 @@ MonoBehaviour:
       - m_Target: {fileID: 744782557313731524}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: OnJump
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -350,7 +350,7 @@ MonoBehaviour:
   body: {fileID: 2733794820901092346}
   walkVelocity: 7
   dampening: 0.356
-  jumpHeight: 2
+  jumpHeight: 3
   timeToPeak: 0.3
   timeToLand: 0.25
   floorSensor: {fileID: 6642414492953894533}

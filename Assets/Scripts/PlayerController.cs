@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
     private float timeToLand;
     [SerializeField]
     private Sensor floorSensor;
+    public Transform feetPosition => floorSensor.transform;
 
     private float jumpVelocity => 2 * jumpHeight / timeToPeak;
     private float jumpRiseGravity => -jumpVelocity / timeToPeak;
@@ -35,8 +36,9 @@ public class PlayerController : MonoBehaviour
         direction = Vector2.Dot(context.ReadValue<Vector2>(), Vector2.right);
     }
 
-    public void OnJump()
+    public void OnJump(InputAction.CallbackContext context)
     {
+        if (!context.performed) return;
         if (!floorSensor.sensing) return;
         body.linearVelocityY = jumpVelocity;
     }
