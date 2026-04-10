@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 635d87a1ecc90d84cbc4ac5079498190
+guid: 5c1793fbee004de449c34909c01061e7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4865639045389544332
-    second: Ground_Tile_0
+      213: -3739957133524300147
+    second: Untitled_Artwork-1_0
+  - first:
+      213: 4212383234984719242
+    second: Untitled_Artwork-1_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,9 +49,9 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
-  spriteMeshType: 0
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -100,13 +103,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Ground_Tile_0
+      name: Untitled_Artwork-1_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 256
-        height: 173
+        x: 25
+        y: 94
+        width: 163
+        height: 106
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +118,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c8be6b9bee8368340800000000000000
-      internalID: 4865639045389544332
+      spriteID: d8e881d5dc0091cc0800000000000000
+      internalID: -3739957133524300147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Untitled_Artwork-1_1
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 15
+        width: 98
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a83331beb34657a30800000000000000
+      internalID: 4212383234984719242
       vertices: []
       indices: 
       edges: []
@@ -125,7 +150,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +160,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Ground_Tile_0: 4865639045389544332
+      Untitled_Artwork-1_0: -3739957133524300147
+      Untitled_Artwork-1_1: 4212383234984719242
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
