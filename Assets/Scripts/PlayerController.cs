@@ -41,7 +41,11 @@ public class PlayerController : MonoBehaviour
 
     public void OnMove(InputAction.CallbackContext context)
     {
-        if (locked) direction = 0;
+        if (locked)
+        {
+            direction = 0;
+            return;
+        }
         direction = Vector2.Dot(context.ReadValue<Vector2>(), Vector2.right);
     }
 
