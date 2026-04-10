@@ -54,9 +54,9 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void OnInteract()
+    public void OnInteract(InputAction.CallbackContext context)
     {
-        Interact?.Invoke();
+        if (context.started) Interact?.Invoke();
     }
 
     private void FixedUpdate()
