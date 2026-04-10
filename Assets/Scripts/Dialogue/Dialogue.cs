@@ -9,6 +9,7 @@ public class Dialogue : ScriptableObject
     [Serializable]
     public struct Sentence
     {
+        [TextArea(1, 3)]
         public string words;
         public int characterIndex;
     }

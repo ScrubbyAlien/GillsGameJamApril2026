@@ -36,13 +36,18 @@ public class PlayerController : MonoBehaviour
     private float direction;
     private float velocity;
 
+    [HideInInspector]
+    public bool locked;
+
     public void OnMove(InputAction.CallbackContext context)
     {
+        if (locked) direction = 0;
         direction = Vector2.Dot(context.ReadValue<Vector2>(), Vector2.right);
     }
 
     public void OnJump(InputAction.CallbackContext context)
     {
+        if (locked) return;
         if (context.performed)
         {
             if (!floorSensor.sensing) return;
@@ -57,6 +62,11 @@ public class PlayerController : MonoBehaviour
     public void OnInteract(InputAction.CallbackContext context)
     {
         if (context.started) Interact?.Invoke();
+    }
+
+    public void OnAttack(InputAction.CallbackContext context)
+    {
+        if (!context.started || locked) return;
     }
 
     private void FixedUpdate()

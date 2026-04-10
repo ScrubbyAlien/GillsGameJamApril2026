@@ -14,6 +14,9 @@ public class DialogueHolder : MonoBehaviour
     private Canvas interactionPopup;
     [SerializeField]
     private bool oneTimeDialogue;
+    [SerializeField]
+    private bool lockPlayer;
+    private PlayerController playerController;
 
     private int sentenceIndex;
 
@@ -31,8 +34,8 @@ public class DialogueHolder : MonoBehaviour
 
     public void Start()
     {
-        PlayerController player = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
-        player.Interact += PlayerInteracted;
+        playerController = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
+        playerController.Interact += PlayerInteracted;
         playerSensor.OnStartSense += PlayerEnter;
         playerSensor.OnStopSense += PlayerExit;
         CloseDialogue();
@@ -81,11 +84,20 @@ public class DialogueHolder : MonoBehaviour
         interactionPopup.gameObject.SetActive(false);
         dialogueOpen = true;
 
+        if (lockPlayer)
+        {
+            playerController.locked = true;
+        }
+
         UpdateDialogue();
     }
 
     private void CloseDialogue()
     {
+        if (lockPlayer)
+        {
+            playerController.locked = false;
+        }
         dialogueOpen = false;
         HideAllBoxes();
     }
