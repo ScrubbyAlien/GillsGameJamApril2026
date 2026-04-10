@@ -14,11 +14,11 @@ public class Platform : MonoBehaviour
     [SerializeField]
     private Behaviour platformBehaviour;
 
-    private Transform playerFeet;
+    private Collider2D playerFeet;
 
     private void Start()
     {
-        playerFeet = GameObject.FindWithTag("Player").transform;
+        playerFeet = GameObject.FindWithTag("Player").GetComponent<Collider2D>();
     }
 
     private void FixedUpdate()
@@ -27,7 +27,7 @@ public class Platform : MonoBehaviour
         {
             case Behaviour.AlwaysOn: return;
             case Behaviour.PassThroughBottom:
-                if (collider.bounds.max.y > playerFeet.position.y)
+                if (collider.bounds.max.y > playerFeet.bounds.min.y)
                 {
                     collider.enabled = false;
                 }

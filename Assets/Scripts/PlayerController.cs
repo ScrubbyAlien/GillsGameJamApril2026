@@ -23,6 +23,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private Sensor floorSensor;
     public Transform feetPosition => floorSensor.transform;
+    [SerializeField]
+    private float jumpCancelledBreakFactor;
 
     private float jumpVelocity => 2 * jumpHeight / timeToPeak;
     private float jumpRiseGravity => -jumpVelocity / timeToPeak;
@@ -38,9 +40,15 @@ public class PlayerController : MonoBehaviour
 
     public void OnJump(InputAction.CallbackContext context)
     {
-        if (!context.performed) return;
-        if (!floorSensor.sensing) return;
-        body.linearVelocityY = jumpVelocity;
+        if (context.performed)
+        {
+            if (!floorSensor.sensing) return;
+            body.linearVelocityY = jumpVelocity;
+        }
+        if (context.canceled)
+        {
+            if (body.linearVelocityY is > 0) body.linearVelocityY *= jumpCancelledBreakFactor;
+        }
     }
 
     private void FixedUpdate()
