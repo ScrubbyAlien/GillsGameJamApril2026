@@ -791,21 +791,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3443719108394174611, guid: 70cc96e1bb85f78468ccc8a1077a13a4, type: 3}
-      propertyPath: m_Size.y
-      value: 0.2849455
-      objectReference: {fileID: 0}
-    - target: {fileID: 3443719108394174611, guid: 70cc96e1bb85f78468ccc8a1077a13a4, type: 3}
-      propertyPath: m_Offset.y
-      value: 0.06622028
-      objectReference: {fileID: 0}
     - target: {fileID: 5106171305756953627, guid: 70cc96e1bb85f78468ccc8a1077a13a4, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 8792888178520863957, guid: 70cc96e1bb85f78468ccc8a1077a13a4, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.994
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
