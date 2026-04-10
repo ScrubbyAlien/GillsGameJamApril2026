@@ -696,6 +696,11 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!223 &1405063021 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 1661004335343142808, guid: 9ee79ef01363f204990785d4b65ef747, type: 3}
+  m_PrefabInstance: {fileID: 4692919476300517945}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1518102682
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -887,6 +892,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1137832619780139033, guid: 9ee79ef01363f204990785d4b65ef747, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -1.93
+      objectReference: {fileID: 0}
+    - target: {fileID: 1137832619780139033, guid: 9ee79ef01363f204990785d4b65ef747, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 1.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 1615348959027651616, guid: 9ee79ef01363f204990785d4b65ef747, type: 3}
+      propertyPath: m_Name
+      value: Popup
+      objectReference: {fileID: 0}
     - target: {fileID: 1875712196554144520, guid: 9ee79ef01363f204990785d4b65ef747, type: 3}
       propertyPath: m_Name
       value: Tomato
@@ -930,6 +947,26 @@ PrefabInstance:
     - target: {fileID: 5608240237333896465, guid: 9ee79ef01363f204990785d4b65ef747, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5854457644561051101, guid: 9ee79ef01363f204990785d4b65ef747, type: 3}
+      propertyPath: activationMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5854457644561051101, guid: 9ee79ef01363f204990785d4b65ef747, type: 3}
+      propertyPath: dialogueBoxes.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5854457644561051101, guid: 9ee79ef01363f204990785d4b65ef747, type: 3}
+      propertyPath: 'dialogueBoxes.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1405063021}
+    - target: {fileID: 5854457644561051101, guid: 9ee79ef01363f204990785d4b65ef747, type: 3}
+      propertyPath: 'dialogueBoxes.Array.data[1]'
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6079600847463744721, guid: 9ee79ef01363f204990785d4b65ef747, type: 3}
+      propertyPath: m_Name
+      value: Box1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -1,3 +1,4 @@
+using System.Linq;
 using TMPro;
 using UnityEngine;
 
@@ -8,9 +9,7 @@ public class DialogueHolder : MonoBehaviour
     [SerializeField]
     private Dialogue dialogueAsset;
     [SerializeField]
-    private Canvas dialogueBox;
-    [SerializeField]
-    private TMP_Text textField;
+    private Canvas[] dialogueBoxes;
     [SerializeField]
     private Canvas interactionPopup;
     [SerializeField]
@@ -36,7 +35,7 @@ public class DialogueHolder : MonoBehaviour
         player.Interact += PlayerInteracted;
         playerSensor.OnStartSense += PlayerEnter;
         playerSensor.OnStopSense += PlayerExit;
-        dialogueBox.gameObject.SetActive(false);
+        CloseDialogue();
         interactionPopup.gameObject.SetActive(false);
     }
 
@@ -81,14 +80,14 @@ public class DialogueHolder : MonoBehaviour
         else if (dialogueFinished && oneTimeDialogue) return;
         interactionPopup.gameObject.SetActive(false);
         dialogueOpen = true;
-        dialogueBox.gameObject.SetActive(true);
-        textField.text = dialogueAsset.sentences[sentenceIndex];
+
+        UpdateDialogue();
     }
 
     private void CloseDialogue()
     {
         dialogueOpen = false;
-        dialogueBox.gameObject.SetActive(false);
+        HideAllBoxes();
     }
 
     private void ProgressDialogue()
@@ -104,6 +103,28 @@ public class DialogueHolder : MonoBehaviour
             }
             return;
         }
-        textField.text = dialogueAsset.sentences[sentenceIndex];
+        UpdateDialogue();
+    }
+
+    private void UpdateDialogue()
+    {
+        HideAllBoxes();
+        if (sentenceIndex >= dialogueAsset.sentences.Length) return;
+        if (!dialogueOpen) return;
+
+        Canvas dialogBox = dialogueBoxes[dialogueAsset.sentences[sentenceIndex].characterIndex];
+        string sentence = dialogueAsset.sentences[sentenceIndex].words;
+
+        TMP_Text textField = dialogBox.GetComponentInChildren<TMP_Text>();
+        dialogBox.gameObject.SetActive(true);
+        textField.text = sentence;
+    }
+
+    private void HideAllBoxes()
+    {
+        foreach (Canvas dialogueBox in dialogueBoxes)
+        {
+            dialogueBox.gameObject.SetActive(false);
+        }
     }
 }

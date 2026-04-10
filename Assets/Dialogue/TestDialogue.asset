@@ -13,6 +13,9 @@ MonoBehaviour:
   m_Name: TestDialogue
   m_EditorClassIdentifier: 
   sentences:
-  - Hello this i sentence
-  - This is other sentence
-  - Wow this is last sentence
+  - words: this is a dialogue
+    characterIndex: 0
+  - words: wooooow
+    characterIndex: 0
+  - words: back to old box
+    characterIndex: 0
