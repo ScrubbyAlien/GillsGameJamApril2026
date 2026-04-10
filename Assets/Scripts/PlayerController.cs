@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
     private float timeToLand;
     [SerializeField]
     private Sensor floorSensor;
-    public Transform feetPosition => floorSensor.transform;
+    public Transform feet => floorSensor.transform;
     [SerializeField]
     private float jumpCancelledBreakFactor;
 

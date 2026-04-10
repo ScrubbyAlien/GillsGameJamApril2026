@@ -650,8 +650,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dampening: 0.189
-  minY: 0
-  maxY: 116.16
+  screenHeight: 8
+  minIndex: 0
 --- !u!114 &1052134227
 MonoBehaviour:
   m_ObjectHideFlags: 0
