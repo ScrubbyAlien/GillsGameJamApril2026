@@ -1,8 +1,11 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
+    public event Action Interact;
+
     [SerializeField]
     private Rigidbody2D body;
 
@@ -22,7 +25,7 @@ public class PlayerController : MonoBehaviour
     private float timeToLand;
     [SerializeField]
     private Sensor floorSensor;
-    public Transform feetPosition => floorSensor.transform;
+    public Transform feet => floorSensor.transform;
     [SerializeField]
     private float jumpCancelledBreakFactor;
 
@@ -49,6 +52,11 @@ public class PlayerController : MonoBehaviour
         {
             if (body.linearVelocityY is > 0) body.linearVelocityY *= jumpCancelledBreakFactor;
         }
+    }
+
+    public void OnInteract(InputAction.CallbackContext context)
+    {
+        if (context.started) Interact?.Invoke();
     }
 
     private void FixedUpdate()
