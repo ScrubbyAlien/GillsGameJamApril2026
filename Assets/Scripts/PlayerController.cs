@@ -40,6 +40,9 @@ public class PlayerController : MonoBehaviour
     private float direction;
     private float velocity;
 
+    [SerializeField]
+    private bool hasSword;
+
     [HideInInspector]
     public bool locked;
 
@@ -74,8 +77,8 @@ public class PlayerController : MonoBehaviour
 
     public void OnAttack(InputAction.CallbackContext context)
     {
-        if (!context.started || locked) return;
-
+        if (!context.started || locked || !hasSword) return;
+        animator.SetTrigger("attack");
     }
 
     private void FixedUpdate()
