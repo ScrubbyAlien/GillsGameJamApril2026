@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41769ae359eedfd4988ee9532791be84, type: 3}
+  m_Name: BobDialogue
+  m_EditorClassIdentifier: 
+  sentences:
+  - words: Oh, hello there stranger!
+    characterIndex: 0
+  - words: '*sniffles*'
+    characterIndex: 0
+  - words: Are you also sulking here in the woods?
+    characterIndex: 0
+  - words: I'm Bob.
+    characterIndex: 0
+  - words: I-I used to be the greatest, bestest,-
+    characterIndex: 0
+  - words: most awesomest <color=#d61818><b>warrior</b></color> in all of <u>Tomato
+      Village</u>...
+    characterIndex: 0
+  - words: "\u2026until they threw me out."
+    characterIndex: 0
+  - words: "They told me I wasn\u2019t good enough."
+    characterIndex: 0
+  - words: "Maybe I\u2019m not that awesome after all."
+    characterIndex: 0
+  - words: '*sniffles*'
+    characterIndex: 0
+  - words: But hey! You can take my sword!
+    characterIndex: 0
+  - words: "Maybe you\u2019ll find a better use for it."
+    characterIndex: 0
+  - words: "I won\u2019t need it anymore..."
+    characterIndex: 0
+  - words: '*cries*'
+    characterIndex: 0

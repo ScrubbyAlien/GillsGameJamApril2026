@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sentences:
   - words: this is a dialogue
-    characterIndex: 0
+    characterIndex: 10
   - words: wooooow
-    characterIndex: 0
+    characterIndex: 10
   - words: back to old box
-    characterIndex: 0
+    characterIndex: 10
