@@ -8,6 +8,10 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField]
     private Rigidbody2D body;
+    [SerializeField]
+    private Animator animator;
+    [SerializeField]
+    private SpriteRenderer spriteRenderer;
 
     [Header("Movement")]
     [SerializeField]
@@ -71,12 +75,16 @@ public class PlayerController : MonoBehaviour
     public void OnAttack(InputAction.CallbackContext context)
     {
         if (!context.started || locked) return;
+
     }
 
     private void FixedUpdate()
     {
         velocity = Mathf.Lerp(velocity, walkVelocity * direction, dampening);
+        if (velocity < 0f) spriteRenderer.flipX = true;
+        else if (velocity > 0f) spriteRenderer.flipX = false;
         body.linearVelocityX = velocity;
+        animator.SetFloat("speed", Mathf.Abs(velocity));
 
         if (body.linearVelocityY < 0) body.gravityScale = jumpFallGravity;
         else body.gravityScale = jumpRiseGravity;
