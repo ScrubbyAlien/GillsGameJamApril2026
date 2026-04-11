@@ -27,11 +27,12 @@ public class Platform : MonoBehaviour
         {
             case Behaviour.AlwaysOn: return;
             case Behaviour.PassThroughBottom:
+                Debug.DrawLine(col.bounds.max, playerFeet.bounds.min, Color.red, Time.fixedDeltaTime);
                 if (col.bounds.max.y > playerFeet.bounds.min.y)
                 {
-                    col.enabled = false;
+                    col.isTrigger = true;
                 }
-                else col.enabled = true;
+                else col.isTrigger = false;
                 break;
         }
     }

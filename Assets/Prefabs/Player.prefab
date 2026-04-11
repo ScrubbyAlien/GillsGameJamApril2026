@@ -443,7 +443,7 @@ MonoBehaviour:
   animator: {fileID: 8376539018556242123}
   spriteRenderer: {fileID: 781546026263502538}
   walkVelocity: 7
-  dampening: 0.356
+  dampening: 0.3
   jumpHeight: 3
   timeToPeak: 0.4
   timeToLand: 0.33

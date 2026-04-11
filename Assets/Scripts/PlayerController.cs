@@ -128,4 +128,15 @@ public class PlayerController : MonoBehaviour
         }
         invincibleUntil = Time.time + invinciblityTime;
     }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.green;
+        // horizontal distance
+        Gizmos.DrawLine(feet.position, feet.position + Vector3.right * walkVelocity * (timeToPeak + timeToLand));
+
+        // vertical height
+        Vector3 peakX = feet.position + Vector3.right * walkVelocity * timeToPeak;
+        Gizmos.DrawLine(peakX, peakX + Vector3.up * jumpHeight);
+    }
 }
