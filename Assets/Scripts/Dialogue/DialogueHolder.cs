@@ -68,7 +68,8 @@ public class DialogueHolder : MonoBehaviour
                 OpenDialogue();
                 break;
             case ActivationMode.Manual:
-                if (!dialogueOpen && !oneTimeDialogueFinished) interactionPopup.gameObject.SetActive(true);
+                if (!dialogueOpen && !oneTimeDialogueFinished && interactionPopup)
+                    interactionPopup.gameObject.SetActive(true);
                 break;
         }
     }
@@ -80,7 +81,7 @@ public class DialogueHolder : MonoBehaviour
             dialogueFinished = true;
             OnOneTimeDialogueFinished?.Invoke();
         }
-        interactionPopup.gameObject.SetActive(false);
+        if (activationMode == ActivationMode.Manual && interactionPopup) interactionPopup.gameObject.SetActive(false);
         CloseDialogue();
     }
 
@@ -92,7 +93,7 @@ public class DialogueHolder : MonoBehaviour
             sentenceIndex = 0;
         }
         else if (oneTimeDialogueFinished) return;
-        interactionPopup.gameObject.SetActive(false);
+        if (interactionPopup) interactionPopup.gameObject.SetActive(false);
         dialogueOpen = true;
 
         if (lockPlayer)
@@ -126,7 +127,8 @@ public class DialogueHolder : MonoBehaviour
             }
             if (playerSensor.sensing && activationMode == ActivationMode.Manual && !oneTimeDialogue)
             {
-                interactionPopup.gameObject.SetActive(true);
+                if (activationMode == ActivationMode.Manual && interactionPopup)
+                    interactionPopup.gameObject.SetActive(true);
             }
             return;
         }
