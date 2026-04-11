@@ -15,7 +15,23 @@ MonoBehaviour:
   sentences:
   - words: This is insane, we have to stop them Carl!
     characterIndex: 0
-  - words: 
+  - words: That <color=#d61818><b>warrior</b></color> is killing everyone!
     characterIndex: 0
-  - words: back to old box
+  - words: What do you mean WE? You have to stop him!
+    characterIndex: 1
+  - words: I don't know how to fight! I'm a <color=#06066b><b>Cuddly Tomato...</b></color>.
+    characterIndex: 1
+  - words: That is a lie, I know you can fight!
+    characterIndex: 0
+  - words: Nu-uh
+    characterIndex: 1
+  - words: Yes I have!
+    characterIndex: 0
+  - words: Nope, can't do it.
+    characterIndex: 1
+  - words: Think about it for crying out loud!
+    characterIndex: 0
+  - words: 'Thought about it. Not gonna do it. '
+    characterIndex: 1
+  - words: Sweet Tomato Jesus! They're here!
     characterIndex: 0
