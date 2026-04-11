@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: ffbb3339773e7a8488a634983d92bb4a
+guid: 91822a59687298e48b87fac6e2eafe05
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5522849500431082877
-    second: TomatoPLACEHOLDER_0
+      213: 7664959565855814797
+    second: TomatoBallJump-6_0
+  - first:
+      213: -5054431598473775832
+    second: TomatoBallJump-6_1
+  - first:
+      213: -8478691190428835577
+    second: TomatoBallJump-6_2
+  - first:
+      213: 6509577181402433484
+    second: TomatoBallJump-6_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +109,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TomatoPLACEHOLDER_0
+      name: TomatoBallJump-6_0
       rect:
         serializedVersion: 2
-        x: 53
-        y: 13
-        width: 367
-        height: 396
+        x: 4
+        y: 127
+        width: 97
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +124,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d75632dfb5a15ac40800000000000000
-      internalID: 5522849500431082877
+      spriteID: d84719c4d186f5a60800000000000000
+      internalID: 7664959565855814797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TomatoBallJump-6_1
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 104
+        width: 43
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 825f57f9d3d0bd9b0800000000000000
+      internalID: -5054431598473775832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TomatoBallJump-6_2
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 92
+        width: 71
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 701614ac843a55a80800000000000000
+      internalID: -8478691190428835577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TomatoBallJump-6_3
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 11
+        width: 418
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc70b7f05f9a65a50800000000000000
+      internalID: 6509577181402433484
       vertices: []
       indices: 
       edges: []
@@ -135,7 +210,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      TomatoPLACEHOLDER_0: 5522849500431082877
+      TomatoBallJump-6_0: 7664959565855814797
+      TomatoBallJump-6_1: -5054431598473775832
+      TomatoBallJump-6_2: -8478691190428835577
+      TomatoBallJump-6_3: 6509577181402433484
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

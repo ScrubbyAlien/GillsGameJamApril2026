@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: ffbb3339773e7a8488a634983d92bb4a
+guid: 53a2ecd7f1047b84f9c6f757b93ce67d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5522849500431082877
-    second: TomatoPLACEHOLDER_0
+      213: -4502281639211015077
+    second: TomatoBallJump-1_0
+  - first:
+      213: -6978218077323160680
+    second: TomatoBallJump-1_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +103,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TomatoPLACEHOLDER_0
+      name: TomatoBallJump-1_0
       rect:
         serializedVersion: 2
-        x: 53
-        y: 13
-        width: 367
-        height: 396
+        x: 97
+        y: 490
+        width: 6
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +118,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d75632dfb5a15ac40800000000000000
-      internalID: 5522849500431082877
+      spriteID: b54601804bea481c0800000000000000
+      internalID: -4502281639211015077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TomatoBallJump-1_1
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 11
+        width: 430
+        height: 431
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89391ff71a3682f90800000000000000
+      internalID: -6978218077323160680
       vertices: []
       indices: 
       edges: []
@@ -135,7 +160,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      TomatoPLACEHOLDER_0: 5522849500431082877
+      TomatoBallJump-1_0: -4502281639211015077
+      TomatoBallJump-1_1: -6978218077323160680
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
