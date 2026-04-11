@@ -415,7 +415,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 391511817858447822, guid: 9ee79ef01363f204990785d4b65ef747, type: 3}
       propertyPath: mode
-      value: 1
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 391511817858447822, guid: 9ee79ef01363f204990785d4b65ef747, type: 3}
+      propertyPath: aggressiveWalkSpeed
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1875712196554144520, guid: 9ee79ef01363f204990785d4b65ef747, type: 3}
       propertyPath: m_Name
