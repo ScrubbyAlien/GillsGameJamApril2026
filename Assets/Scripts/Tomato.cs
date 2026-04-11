@@ -26,6 +26,8 @@ public class Tomato : MonoBehaviour, IKillable
     [SerializeField]
     public bool aggressive = true;
     [SerializeField]
+    public bool disliked = false;
+    [SerializeField]
     private UnityEvent OnTurnAggressive;
     [SerializeField]
     private UnityEvent OnDeath;

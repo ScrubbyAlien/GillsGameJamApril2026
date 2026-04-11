@@ -17,6 +17,7 @@ public class WorldState : ScriptableObject
 
     public void KillTomato(Tomato tomato)
     {
+        if (tomato.disliked) return;
         deadTomatoes += 1;
         OnTomatoKilled?.Invoke();
     }
