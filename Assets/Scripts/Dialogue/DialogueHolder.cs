@@ -19,10 +19,14 @@ public class DialogueHolder : MonoBehaviour
     private bool lockPlayer;
     private PlayerController playerController;
 
+    private bool openedFirstTime = true;
+
     private bool oneTimeDialogueFinished => oneTimeDialogue && dialogueFinished;
 
     private int sentenceIndex;
 
+    [SerializeField]
+    private UnityEvent OnOpenedFirstTime;
     [SerializeField]
     private UnityEvent OnOneTimeDialogueFinished;
 
@@ -87,6 +91,12 @@ public class DialogueHolder : MonoBehaviour
 
     private void OpenDialogue()
     {
+        if (openedFirstTime)
+        {
+            openedFirstTime = false;
+            OnOpenedFirstTime?.Invoke();
+        }
+
         if (dialogueFinished && !oneTimeDialogue)
         {
             dialogueFinished = false;

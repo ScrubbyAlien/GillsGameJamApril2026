@@ -1,5 +1,7 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Counter : MonoBehaviour
 {
@@ -8,6 +10,8 @@ public class Counter : MonoBehaviour
 
     [SerializeField]
     private TMP_Text counterText;
+    [SerializeField]
+    private Image icon;
 
     private void Start()
     {
@@ -25,6 +29,7 @@ public class Counter : MonoBehaviour
     {
         gameObject.SetActive(true);
         UpdateCounter();
+        StartCoroutine(FadeIn());
     }
 
     private void Reset()
@@ -32,5 +37,28 @@ public class Counter : MonoBehaviour
         worldState.Reset -= Reset;
         worldState.OnTomatoKilled -= UpdateCounter;
         UpdateCounter();
+    }
+
+    private float currentAlpha;
+    private IEnumerator FadeIn()
+    {
+        currentAlpha = 0;
+        while (currentAlpha < 1)
+        {
+            SetAlphas(currentAlpha);
+            currentAlpha += Time.deltaTime / 4f;
+            yield return null;
+        }
+    }
+
+    private void SetAlphas(float alpha)
+    {
+        Color textColor = counterText.color;
+        textColor.a = alpha;
+        counterText.color = textColor;
+
+        Color iconColor = icon.color;
+        iconColor.a = alpha;
+        icon.color = iconColor;
     }
 }
