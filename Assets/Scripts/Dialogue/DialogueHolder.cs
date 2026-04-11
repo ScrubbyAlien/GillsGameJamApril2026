@@ -45,7 +45,7 @@ public class DialogueHolder : MonoBehaviour
         playerSensor.OnStartSense += PlayerEnter;
         playerSensor.OnStopSense += PlayerExit;
         CloseDialogue();
-        interactionPopup.gameObject.SetActive(false);
+        if (interactionPopup) interactionPopup.gameObject.SetActive(false);
     }
 
     private void PlayerInteracted()
