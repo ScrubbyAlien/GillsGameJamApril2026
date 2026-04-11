@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 public class SceneChanger : MonoBehaviour
@@ -8,8 +9,12 @@ public class SceneChanger : MonoBehaviour
     [SerializeField]
     private WorldState worldState;
 
+    [SerializeField]
+    private UnityEvent OnLoadScene;
+
     public void LoadScene(string name)
     {
+        OnLoadScene?.Invoke();
         SceneManager.LoadScene(name);
         worldState.OnEnable();
     }

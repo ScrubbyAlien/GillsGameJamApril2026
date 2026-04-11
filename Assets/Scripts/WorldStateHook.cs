@@ -7,6 +7,11 @@ public class WorldStateHook : MonoBehaviour
     private WorldState worldState;
 
     [SerializeField]
+    private AudioSource audioSource;
+    [SerializeField]
+    private AudioClip nice, angry, recordScratch;
+
+    [SerializeField]
     private UnityEvent OnTurnAggressive;
 
     private void Start()
@@ -22,5 +27,14 @@ public class WorldStateHook : MonoBehaviour
     private void InvokeOnTurnAggressive()
     {
         OnTurnAggressive?.Invoke();
+        SwitchMusic();
+    }
+
+    public void SwitchMusic()
+    {
+        audioSource.Stop();
+        audioSource.PlayOneShot(recordScratch);
+        audioSource.clip = angry;
+        audioSource.PlayDelayed(1f);
     }
 }

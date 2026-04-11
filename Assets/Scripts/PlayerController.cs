@@ -37,6 +37,7 @@ public class PlayerController : MonoBehaviour, IKillable
     public Transform feet => floorSensor.transform;
     [SerializeField]
     private float jumpCancelledBreakFactor;
+    private bool inAirLastFrame;
 
     private float jumpVelocity => 2 * jumpHeight / timeToPeak;
     private float jumpRiseGravity => -jumpVelocity / timeToPeak;
@@ -55,9 +56,15 @@ public class PlayerController : MonoBehaviour, IKillable
     [SerializeField]
     private float knockBackForce;
 
+    [Header("Sound")]
+    [SerializeField]
+    private AudioSource audioSource;
+    [SerializeField]
+    private AudioClip swordSlice, jump, landing;
+
+
     [SerializeField]
     private bool hasSword;
-
     [HideInInspector]
     public bool locked;
 
@@ -78,6 +85,7 @@ public class PlayerController : MonoBehaviour, IKillable
         {
             if (!floorSensor.sensing) return;
             body.linearVelocityY = jumpVelocity;
+            audioSource.PlayOneShot(jump);
         }
         if (context.canceled)
         {
@@ -96,6 +104,11 @@ public class PlayerController : MonoBehaviour, IKillable
         animator.SetTrigger("attack");
     }
 
+    public void PlayAttackSound()
+    {
+        audioSource.PlayOneShot(swordSlice);
+    }
+
     private void Start()
     {
         currentHitPoints = maxHitPoints;
@@ -104,7 +117,14 @@ public class PlayerController : MonoBehaviour, IKillable
 
     private void Update()
     {
+        if (inAirLastFrame && floorSensor.sensing)
+        {
+            // landed
+            audioSource.PlayOneShot(landing);
+        }
+
         animator.SetBool("floored", floorSensor.sensing);
+        inAirLastFrame = !floorSensor.sensing;
     }
 
     private void FixedUpdate()
