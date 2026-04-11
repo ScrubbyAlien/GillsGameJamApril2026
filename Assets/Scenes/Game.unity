@@ -850,6 +850,7 @@ MonoBehaviour:
   dampening: 0.189
   screenHeight: 8
   minIndex: 0
+  initialX: -17
 --- !u!114 &1052134227
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1175,7 +1176,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2268264670515690806, guid: c1527976ad6f5514f8c7208a7f6b8e86, type: 3}
       propertyPath: m_SpriteTilingProperty.newSize.x
-      value: 11.718906
+      value: 11.635533
       objectReference: {fileID: 0}
     - target: {fileID: 4427369503472750674, guid: c1527976ad6f5514f8c7208a7f6b8e86, type: 3}
       propertyPath: m_Size.x
@@ -1352,15 +1353,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5608240237333896465, guid: 9ee79ef01363f204990785d4b65ef747, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.29
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 5608240237333896465, guid: 9ee79ef01363f204990785d4b65ef747, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.29
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 5608240237333896465, guid: 9ee79ef01363f204990785d4b65ef747, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.29
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 5608240237333896465, guid: 9ee79ef01363f204990785d4b65ef747, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1368,7 +1369,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5608240237333896465, guid: 9ee79ef01363f204990785d4b65ef747, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.09
+      value: -2.71
       objectReference: {fileID: 0}
     - target: {fileID: 5608240237333896465, guid: 9ee79ef01363f204990785d4b65ef747, type: 3}
       propertyPath: m_LocalPosition.z
