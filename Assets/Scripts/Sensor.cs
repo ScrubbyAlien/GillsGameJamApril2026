@@ -11,8 +11,6 @@ public class Sensor : MonoBehaviour
     public event Action<Collider2D> OnStartSense;
     public event Action<Collider2D> OnStopSense;
 
-    private float stopSensingTime;
-
     public bool sensing => sensedObjects.Count > 0;
 
     private void Start()

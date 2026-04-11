@@ -30,10 +30,22 @@ public class Platform : MonoBehaviour
                 Debug.DrawLine(col.bounds.max, playerFeet.bounds.min, Color.red, Time.fixedDeltaTime);
                 if (col.bounds.max.y > playerFeet.bounds.min.y)
                 {
-                    col.isTrigger = true;
+                    SetCollideWithPlayer(false);
                 }
-                else col.isTrigger = false;
+                else SetCollideWithPlayer(true);
                 break;
+        }
+    }
+
+    private void SetCollideWithPlayer(bool collide)
+    {
+        if (collide)
+        {
+            col.excludeLayers = LayerMask.GetMask();
+        }
+        else
+        {
+            col.excludeLayers = LayerMask.GetMask("Player");
         }
     }
 }
