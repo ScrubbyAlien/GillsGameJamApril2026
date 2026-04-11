@@ -154,7 +154,7 @@ public class PlayerController : MonoBehaviour, IKillable
     {
         Instantiate(deathEffect, transform.position, Quaternion.identity);
         gameObject.SetActive(false);
-        sceneChanger.LoadSceneDelayed("Game", 3f);
+        sceneChanger.LoadSceneDelayed("MainMenu", 3f);
     }
 
     public void GetSword()

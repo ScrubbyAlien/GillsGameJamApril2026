@@ -1,4 +1,5 @@
 using System.Collections;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -22,5 +23,14 @@ public class SceneChanger : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
         LoadScene(name);
+    }
+
+    public void QuitApplication()
+    {
+#if UNITY_EDITOR
+        EditorApplication.ExitPlaymode();
+#else
+        Application.Quit();
+#endif
     }
 }

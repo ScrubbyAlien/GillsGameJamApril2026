@@ -81,6 +81,7 @@ public class Tomato : MonoBehaviour, IKillable
 
         if (other.gameObject.layer == LayerMask.NameToLayer("Hitbox"))
         {
+            Debug.Log(gameObject.name);
             Die();
         }
     }
