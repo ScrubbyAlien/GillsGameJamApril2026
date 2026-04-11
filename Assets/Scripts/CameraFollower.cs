@@ -40,4 +40,14 @@ public class CameraFollower : MonoBehaviour
     {
         xPos = newXPos;
     }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.blue;
+        for (int i = 0; i < 30; i++)
+        {
+            float y = i * screenHeight + halfHeight;
+            Gizmos.DrawLine(new Vector3(-100, y, 0), new Vector3(100, y, 0));
+        }
+    }
 }
