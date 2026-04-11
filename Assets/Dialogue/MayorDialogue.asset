@@ -13,9 +13,21 @@ MonoBehaviour:
   m_Name: MayorDialogue
   m_EditorClassIdentifier: 
   sentences:
-  - words: this is a dialogue
+  - words: Well well well!
     characterIndex: 0
-  - words: wooooow
+  - words: Lookie here!
     characterIndex: 0
-  - words: back to old box
+  - words: Are you a <color=#d61818><b>warrior</b></color> perhaps?
+    characterIndex: 0
+  - words: I am the <u>Mayor</u> of <u>Tomato Village</u>.
+    characterIndex: 0
+  - words: I have a quest for you!
+    characterIndex: 0
+  - words: My <u>niece</u> is stuck at the top of this Tomato plant.
+    characterIndex: 0
+  - words: Please save her!
+    characterIndex: 0
+  - words: Hopefully you will perfor better than the last <u>warrior</u>...
+    characterIndex: 0
+  - words: He was horrible!
     characterIndex: 0
