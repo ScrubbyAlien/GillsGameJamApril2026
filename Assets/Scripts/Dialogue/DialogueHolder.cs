@@ -75,6 +75,11 @@ public class DialogueHolder : MonoBehaviour
 
     private void PlayerExit(Collider2D _)
     {
+        if (sentenceIndex == dialogueAsset.sentences.Length - 1 && oneTimeDialogue && !dialogueFinished)
+        {
+            dialogueFinished = true;
+            OnOneTimeDialogueFinished?.Invoke();
+        }
         interactionPopup.gameObject.SetActive(false);
         CloseDialogue();
     }
