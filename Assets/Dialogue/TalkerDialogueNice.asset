@@ -10,21 +10,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 41769ae359eedfd4988ee9532791be84, type: 3}
-  m_Name: CuteTomato
+  m_Name: TalkerDialogueNice
   m_EditorClassIdentifier: 
   sentences:
-  - words: Hello stranger!
+  - words: Caaaaaaaarl...
     characterIndex: 0
-  - words: Are you here to save the child?
+  - words: I need my fix...
     characterIndex: 0
-  - words: They're stuck at the top, so you've better hurry.
+  - words: I don't have the goods yet...
+    characterIndex: 1
+  - words: But I'm a <color=#06066b><b>Cuddly Tomato</b></color>!
+    characterIndex: 0
+  - words: I have to stay...<color=#06066b><b>mellow</b></color>.
+    characterIndex: 0
+  - words: Well I don't have the <color=#06066b><b>stuff</b></color> yet.
+    characterIndex: 1
+  - words: But Caaaaaaarl...
     characterIndex: 0
   - words: ...
     characterIndex: 0
-  - words: I can't help you...
-    characterIndex: 0
-  - words: I'm not a <color=#066b14><b>Helping Tomato</b></color>, just a <color=#ff00dd><b>Cute
-      Tomato</b></color>.
-    characterIndex: 0
-  - words: Tihi!
+  - words: I can't stop shaking. Please help me.
     characterIndex: 0
