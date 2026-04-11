@@ -98,6 +98,11 @@ public class PlayerController : MonoBehaviour
         UpdateHitPoints?.Invoke(currentHitPoints, maxHitPoints);
     }
 
+    private void Update()
+    {
+        animator.SetBool("floored", floorSensor.sensing);
+    }
+
     private void FixedUpdate()
     {
         if (Time.time > invincibleUntil)
