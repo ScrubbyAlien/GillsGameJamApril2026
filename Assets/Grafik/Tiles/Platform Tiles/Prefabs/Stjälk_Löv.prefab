@@ -147,5 +147,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 277e038c4a30edc4aa67f0d57802d770, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collider: {fileID: 3696375533387575037}
+  col: {fileID: 3696375533387575037}
   platformBehaviour: 1

@@ -524,6 +524,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: "Stja\u0308lk_Topp"
       objectReference: {fileID: 0}
+    - target: {fileID: 2158764909233019094, guid: a19db3203c4dd9c45a0d5c4b2c7cd62f, type: 3}
+      propertyPath: col
+      value: 
+      objectReference: {fileID: 4630281411039747135}
     - target: {fileID: 5763518494544242415, guid: a19db3203c4dd9c45a0d5c4b2c7cd62f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.9342794
@@ -572,6 +576,11 @@ PrefabInstance:
 --- !u!4 &324379432548428423 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5763518494544242415, guid: a19db3203c4dd9c45a0d5c4b2c7cd62f, type: 3}
+  m_PrefabInstance: {fileID: 5439307012943498344}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &4630281411039747135 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 810186695882805335, guid: a19db3203c4dd9c45a0d5c4b2c7cd62f, type: 3}
   m_PrefabInstance: {fileID: 5439307012943498344}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7278016911290302039
