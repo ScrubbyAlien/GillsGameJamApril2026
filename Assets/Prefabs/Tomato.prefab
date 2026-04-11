@@ -143,6 +143,7 @@ MonoBehaviour:
   spriteTransform: {fileID: 4691951274093818480}
   walkSpeed: 3
   aggressive: 1
+  disliked: 0
   OnTurnAggressive:
     m_PersistentCalls:
       m_Calls:
@@ -158,6 +159,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  OnDeath:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &2078502441792921971
 GameObject:
   m_ObjectHideFlags: 0
@@ -207,7 +211,7 @@ BoxCollider2D:
     m_Bits: 64
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 447
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
