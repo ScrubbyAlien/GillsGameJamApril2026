@@ -1,19 +1,31 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Tomato : MonoBehaviour
 {
+    [SerializeField]
+    private WorldState worldState;
+
     [SerializeField]
     private Rigidbody2D body;
     [SerializeField]
     private ParticleSystem splatEffect;
     [SerializeField]
     private Sensor groundSensor;
+    [SerializeField]
+    private Animator animator;
+    [SerializeField]
+    private Transform spriteTransform;
 
     [SerializeField]
     private float walkSpeed;
-    [SerializeField]
-    private float aggressiveWalkSpeed;
     private float direction;
+    private float rotation;
+
+    [SerializeField]
+    public bool aggressive = true;
+    [SerializeField]
+    private UnityEvent OnTurnAggressive;
 
     private Transform player;
 
@@ -23,22 +35,27 @@ public class Tomato : MonoBehaviour
         Neutral
     }
 
-    public enum Behaviour
+    private Hostility hostility;
+    private void TurnAggressive()
     {
-        Idle,
-        Patrolling,
-        Aggressive
+        hostility = Hostility.Hostile;
+        worldState.OnTomatoKilled -= TurnAggressive;
+        animator.SetTrigger("attack");
+        OnTurnAggressive?.Invoke();
     }
 
-    private static Hostility hostility;
-    [SerializeField]
-    private Behaviour mode;
+    public void StartRolling()
+    {
+        direction = Mathf.Sign(walkSpeed);
+    }
 
     private void Start()
     {
         player = GameObject.FindWithTag("Player").transform;
         hostility = Hostility.Neutral;
         direction = Mathf.Sign(walkSpeed);
+        worldState.RegisterTomato(this);
+        if (aggressive) worldState.OnTomatoKilled += TurnAggressive;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -47,50 +64,44 @@ public class Tomato : MonoBehaviour
         {
             if (other.gameObject.layer == LayerMask.NameToLayer("Player"))
             {
-                player.GetComponent<PlayerController>().TakeDamage(1f);
+                player.GetComponent<PlayerController>().TakeDamage(1f, transform.position);
             }
         }
 
         if (other.gameObject.layer == LayerMask.NameToLayer("Hitbox"))
         {
-            Instantiate(splatEffect, transform.position, Quaternion.identity);
-            Destroy(gameObject);
-            hostility = Hostility.Hostile;
+            Die();
         }
     }
 
     private void FixedUpdate()
     {
         UpdateDirection();
-        float velocity = direction * WalkSpeed();
+        float velocity = direction * walkSpeed;
+        rotation = velocity / body.GetComponent<CircleCollider2D>().radius;
         if (velocity < 0f) Flip(true);
         else if (velocity > 0f) Flip(false);
         body.linearVelocityX = velocity;
-        // animator.SetFloat("speed", Mathf.Abs(velocity));
+    }
+
+    private void Update()
+    {
+        Vector3 ea = spriteTransform.eulerAngles;
+        float rotZ = ea.z - rotation * Mathf.Rad2Deg * Time.deltaTime * 2;
+        spriteTransform.eulerAngles = new Vector3(ea.x, ea.y, rotZ);
     }
 
     private void UpdateDirection()
     {
-        switch (mode)
+        switch (hostility)
         {
-            case Behaviour.Idle:
+            case Hostility.Neutral:
                 direction = 0;
                 break;
-            case Behaviour.Patrolling:
+            case Hostility.Hostile:
                 if (!groundSensor.sensing) direction = -direction;
                 break;
-            case Behaviour.Aggressive:
-                if (hostility == Hostility.Neutral) goto case Behaviour.Patrolling;
-                if (!player) goto case Behaviour.Idle;
-                direction = Mathf.Sign(player.position.x - transform.position.x);
-                break;
         }
-    }
-
-    private float WalkSpeed()
-    {
-        if (hostility == Hostility.Hostile && mode == Behaviour.Aggressive) return aggressiveWalkSpeed;
-        else return walkSpeed;
     }
 
     private void Flip(bool left)
@@ -101,5 +112,13 @@ public class Tomato : MonoBehaviour
         if (left) flippedScale = new Vector3(-absXScale, scale.y, scale.z);
         else flippedScale = new Vector3(absXScale, scale.y, scale.z);
         transform.localScale = flippedScale;
+    }
+
+    private void Die()
+    {
+        worldState.KillTomato(this);
+        worldState.OnTomatoKilled -= TurnAggressive;
+        Instantiate(splatEffect, transform.position, Quaternion.identity);
+        Destroy(gameObject);
     }
 }

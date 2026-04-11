@@ -450,7 +450,8 @@ MonoBehaviour:
   floorSensor: {fileID: 6642414492953894533}
   jumpCancelledBreakFactor: 0.3
   maxHitPoints: 10
-  invinciblityTime: 1
+  invinciblityTime: 2
+  knockBackForce: 20
   hasSword: 1
   locked: 0
 --- !u!70 &1539730838596096816

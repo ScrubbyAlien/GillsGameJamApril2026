@@ -48,6 +48,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private float invinciblityTime;
     private float invincibleUntil;
+    [SerializeField]
+    private float knockBackForce;
 
     [SerializeField]
     private bool hasSword;
@@ -98,11 +100,14 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        velocity = Mathf.Lerp(velocity, walkVelocity * direction, dampening);
-        if (velocity < 0f) Flip(true);
-        else if (velocity > 0f) Flip(false);
-        body.linearVelocityX = velocity;
-        animator.SetFloat("speed", Mathf.Abs(velocity));
+        if (Time.time > invincibleUntil)
+        {
+            velocity = Mathf.Lerp(velocity, walkVelocity * direction, dampening);
+            if (velocity < 0f) Flip(true);
+            else if (velocity > 0f) Flip(false);
+            body.linearVelocityX = velocity;
+            animator.SetFloat("speed", Mathf.Abs(velocity));
+        }
 
         if (body.linearVelocityY < 0) body.gravityScale = jumpFallGravity;
         else body.gravityScale = jumpRiseGravity;
@@ -118,15 +123,26 @@ public class PlayerController : MonoBehaviour
         transform.localScale = flippedScale;
     }
 
-    public void TakeDamage(float damage)
+    public void TakeDamage(float damage, Vector3 attackerPosition)
     {
         if (Time.time <= invincibleUntil) return;
         currentHitPoints -= damage;
         if (currentHitPoints <= 0f)
         {
             Destroy(gameObject);
+            return;
         }
+
+        float attackerDirection = transform.position.x - attackerPosition.x;
+        Vector2 force = new Vector2(Mathf.Sign(attackerDirection), 1f).normalized * knockBackForce;
+        body.linearVelocity += force;
+
         invincibleUntil = Time.time + invinciblityTime;
+    }
+
+    public void GetSword()
+    {
+        hasSword = true;
     }
 
     private void OnDrawGizmos()
