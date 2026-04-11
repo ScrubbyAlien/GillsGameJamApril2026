@@ -13,6 +13,9 @@ public class Counter : MonoBehaviour
     [SerializeField]
     private Image icon;
 
+    [SerializeField]
+    private float fadeTime = 10f;
+
     private void Start()
     {
         worldState.OnTomatoKilled += UpdateCounter;
@@ -46,7 +49,7 @@ public class Counter : MonoBehaviour
         while (currentAlpha < 1)
         {
             SetAlphas(currentAlpha);
-            currentAlpha += Time.deltaTime / 4f;
+            currentAlpha += Time.deltaTime / fadeTime;
             yield return null;
         }
     }
