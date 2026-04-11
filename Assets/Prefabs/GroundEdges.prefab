@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4189003460168493781}
   - component: {fileID: 1126264290429078977}
   - component: {fileID: 1775142925175746630}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GroundEdges
   m_TagString: Untagged
   m_Icon: {fileID: 0}
