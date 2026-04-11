@@ -197,6 +197,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   worldState: {fileID: 11400000, guid: ac47b14f3ba58354488e6270617c2d14, type: 2}
   counterText: {fileID: 4492444355002290298}
+  icon: {fileID: 835065953533261567}
+  fadeTime: 8
 --- !u!1 &4548994687192821295
 GameObject:
   m_ObjectHideFlags: 0
