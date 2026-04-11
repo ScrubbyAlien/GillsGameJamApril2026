@@ -18,6 +18,8 @@ public class DialogueHolder : MonoBehaviour
     private bool lockPlayer;
     private PlayerController playerController;
 
+    private bool oneTimeDialogueFinished => oneTimeDialogue && dialogueFinished;
+
     private int sentenceIndex;
 
     public enum ActivationMode
@@ -62,7 +64,7 @@ public class DialogueHolder : MonoBehaviour
                 OpenDialogue();
                 break;
             case ActivationMode.Manual:
-                if (!dialogueOpen) interactionPopup.gameObject.SetActive(true);
+                if (!dialogueOpen && !oneTimeDialogueFinished) interactionPopup.gameObject.SetActive(true);
                 break;
         }
     }
@@ -80,7 +82,7 @@ public class DialogueHolder : MonoBehaviour
             dialogueFinished = false;
             sentenceIndex = 0;
         }
-        else if (dialogueFinished && oneTimeDialogue) return;
+        else if (oneTimeDialogueFinished) return;
         interactionPopup.gameObject.SetActive(false);
         dialogueOpen = true;
 

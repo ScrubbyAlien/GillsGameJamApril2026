@@ -273,9 +273,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerSensor: {fileID: 7222210001793124557}
   dialogueAsset: {fileID: 11400000, guid: dd25d43916206e8499cc2e4d2acf050e, type: 2}
-  dialogueBox: {fileID: 542443211904062627}
-  textField: {fileID: 8150185032806065721}
+  dialogueBoxes:
+  - {fileID: 542443211904062627}
   interactionPopup: {fileID: 5390616473383049270}
+  oneTimeDialogue: 0
+  lockPlayer: 0
   activationMode: 0
 --- !u!114 &7222210001793124557
 MonoBehaviour:

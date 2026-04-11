@@ -15,17 +15,28 @@ public class CameraFollower : MonoBehaviour
     [SerializeField]
     private float minIndex;
 
+    [SerializeField]
+    private float initialX;
+    private float xPos;
+
     private void Start()
     {
         playerFeet = GameObject.FindWithTag("Player").GetComponent<PlayerController>().feet;
         zPos = transform.position.z;
+
+        transform.position = new Vector3(xPos, 0, zPos);
     }
 
     public void LateUpdate()
     {
         float levelHeight = playerFeet.position.y + halfHeight;
         screenIndex = Mathf.FloorToInt(levelHeight / screenHeight);
-        Vector3 targetPosition = new Vector3(0, screenIndex * screenHeight, zPos);
+        Vector3 targetPosition = new Vector3(xPos, screenIndex * screenHeight, zPos);
         transform.position = Vector3.Lerp(transform.position, targetPosition, dampening * Time.deltaTime * 100);
+    }
+
+    public void SetXPos(float newXPos)
+    {
+        xPos = newXPos;
     }
 }
