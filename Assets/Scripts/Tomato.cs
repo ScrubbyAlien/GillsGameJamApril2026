@@ -75,7 +75,7 @@ public class Tomato : MonoBehaviour, IKillable
         {
             if (other.gameObject.layer == LayerMask.NameToLayer("Player"))
             {
-                player.GetComponent<PlayerController>().TakeDamage(1f, transform.position);
+                player.GetComponent<PlayerController>().TakeDamage(0f, transform.position);
             }
         }
 
