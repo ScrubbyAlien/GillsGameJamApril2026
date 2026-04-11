@@ -1,6 +1,7 @@
 using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class DialogueHolder : MonoBehaviour
 {
@@ -21,6 +22,9 @@ public class DialogueHolder : MonoBehaviour
     private bool oneTimeDialogueFinished => oneTimeDialogue && dialogueFinished;
 
     private int sentenceIndex;
+
+    [SerializeField]
+    private UnityEvent OnOneTimeDialogueFinished;
 
     public enum ActivationMode
     {
@@ -111,6 +115,10 @@ public class DialogueHolder : MonoBehaviour
         {
             dialogueFinished = true;
             CloseDialogue();
+            if (oneTimeDialogue)
+            {
+                OnOneTimeDialogueFinished?.Invoke();
+            }
             if (playerSensor.sensing && activationMode == ActivationMode.Manual && !oneTimeDialogue)
             {
                 interactionPopup.gameObject.SetActive(true);
