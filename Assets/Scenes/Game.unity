@@ -876,12 +876,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 796553751}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -17.842, y: 10.86, z: 20}
-  m_LocalScale: {x: 0.93, y: 0.93, z: 0.93}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -19.206451, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1725587841}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!223 &959538521 stripped
 Canvas:
@@ -2002,7 +2002,8 @@ Transform:
   m_LocalPosition: {x: 0.02, y: 10.86, z: 20}
   m_LocalScale: {x: 0.93, y: 0.93, z: 0.93}
   m_ConstrainProportionsScale: 1
-  m_Children: []
+  m_Children:
+  - {fileID: 796553753}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1917795299
@@ -2015,7 +2016,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1875712196554144520, guid: 9ee79ef01363f204990785d4b65ef747, type: 3}
       propertyPath: m_Name
-      value: Tomato (1)
+      value: Bob
       objectReference: {fileID: 0}
     - target: {fileID: 5608240237333896465, guid: 9ee79ef01363f204990785d4b65ef747, type: 3}
       propertyPath: m_LocalScale.x
@@ -2462,7 +2463,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1875712196554144520, guid: 9ee79ef01363f204990785d4b65ef747, type: 3}
       propertyPath: m_Name
-      value: Tomato
+      value: Mayor
       objectReference: {fileID: 0}
     - target: {fileID: 5608240237333896465, guid: 9ee79ef01363f204990785d4b65ef747, type: 3}
       propertyPath: m_LocalScale.x
@@ -2558,19 +2559,18 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1052134225}
-  - {fileID: 1518102682}
   - {fileID: 1671156520}
-  - {fileID: 4692919476300517945}
   - {fileID: 1033095193}
-  - {fileID: 1725587841}
   - {fileID: 1216480006}
-  - {fileID: 1917795299}
-  - {fileID: 796553753}
   - {fileID: 314962422}
+  - {fileID: 1917795299}
+  - {fileID: 4692919476300517945}
+  - {fileID: 1518102682}
   - {fileID: 1622193958}
   - {fileID: 1352149921}
-  - {fileID: 1922802828}
-  - {fileID: 2038228850}
   - {fileID: 1475309970}
   - {fileID: 284496211}
   - {fileID: 1486230348}
+  - {fileID: 1725587841}
+  - {fileID: 2038228850}
+  - {fileID: 1922802828}
