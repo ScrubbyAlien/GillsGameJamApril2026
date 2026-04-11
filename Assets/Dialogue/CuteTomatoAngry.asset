@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41769ae359eedfd4988ee9532791be84, type: 3}
+  m_Name: CuteTomatoAngry
+  m_EditorClassIdentifier: 
+  sentences:
+  - words: Hello stranger!
+    characterIndex: 0
+  - words: Why are you killing everyone?
+    characterIndex: 0
+  - words: We're just Tomatoes.
+    characterIndex: 0
+  - words: ...
+    characterIndex: 0
+  - words: Well, I couldn't stop you even If i tried.
+    characterIndex: 0
+  - words: I'm not a <color=#d61818><b>Warrior Tomato</b></color>, just a <color=#ff00dd><b>Cute
+      Tomato</b></color>.
+    characterIndex: 0
+  - words: Tihi!
+    characterIndex: 0
