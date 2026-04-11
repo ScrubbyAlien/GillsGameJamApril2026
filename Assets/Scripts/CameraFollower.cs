@@ -23,7 +23,7 @@ public class CameraFollower : MonoBehaviour
     {
         playerFeet = GameObject.FindWithTag("Player").GetComponent<PlayerController>().feet;
         zPos = transform.position.z;
-
+        xPos = initialX;
         transform.position = new Vector3(xPos, 0, zPos);
     }
 
