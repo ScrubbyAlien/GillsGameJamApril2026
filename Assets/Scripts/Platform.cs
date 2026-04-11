@@ -10,7 +10,7 @@ public class Platform : MonoBehaviour
     }
 
     [SerializeField]
-    private Collider2D collider;
+    private Collider2D col;
     [SerializeField]
     private Behaviour platformBehaviour;
 
@@ -27,11 +27,11 @@ public class Platform : MonoBehaviour
         {
             case Behaviour.AlwaysOn: return;
             case Behaviour.PassThroughBottom:
-                if (collider.bounds.max.y > playerFeet.bounds.min.y)
+                if (col.bounds.max.y > playerFeet.bounds.min.y)
                 {
-                    collider.enabled = false;
+                    col.enabled = false;
                 }
-                else collider.enabled = true;
+                else col.enabled = true;
                 break;
         }
     }

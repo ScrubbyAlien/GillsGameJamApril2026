@@ -110,7 +110,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4884182709321633212
 Transform:
   m_ObjectHideFlags: 0
@@ -449,7 +449,9 @@ MonoBehaviour:
   timeToLand: 0.33
   floorSensor: {fileID: 6642414492953894533}
   jumpCancelledBreakFactor: 0.3
-  hasSword: 0
+  maxHitPoints: 10
+  invinciblityTime: 1
+  hasSword: 1
   locked: 0
 --- !u!70 &1539730838596096816
 CapsuleCollider2D:

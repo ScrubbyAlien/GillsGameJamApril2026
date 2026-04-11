@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 9c553a838327b5e43abd2fdb962174d8
+guid: a45b3b7ba987afb4ca25059c2272725e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -761490995455544246
-    second: Stup_Tile_0
+      213: 4316707455480534885
+    second: Stup_Tile_v2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,17 +46,17 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 200
-  spriteBorder: {x: 28, y: 67, z: 26, w: 107}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
-  spriteTessellationDetail: 0
+  spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Stup_Tile_0
+      name: Stup_Tile_v2_0
       rect:
         serializedVersion: 2
         x: 5
@@ -109,28 +109,24 @@ TextureImporter:
         height: 173
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 17, y: 67, z: 20, w: 23}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a44b63469f3ae65f0800000000000000
-      internalID: -761490995455544246
+      spriteID: 56792335f8608eb30800000000000000
+      internalID: 4316707455480534885
       vertices: []
       indices: 
       edges: []
       weights: []
     outline: []
     customData: 
-    physicsShape:
-    - - {x: -116, y: -128}
-      - {x: 112, y: -128}
-      - {x: 112, y: 30}
-      - {x: -116, y: 30}
+    physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
-    internalID: 1537655665
+    spriteID: 90e74eb26ebd70149a20fcf515fa4866
+    internalID: 0
     vertices: []
     indices: 
     edges: []
@@ -139,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Stup_Tile_0: -761490995455544246
+      Stup_Tile_v2_0: 4316707455480534885
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

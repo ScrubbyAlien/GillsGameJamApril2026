@@ -4,6 +4,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
+    public event Action<float, float> UpdateHitPoints;
     public event Action Interact;
 
     [SerializeField]
@@ -39,6 +40,14 @@ public class PlayerController : MonoBehaviour
 
     private float direction;
     private float velocity;
+
+    [Header("Hit points")]
+    [SerializeField]
+    private float maxHitPoints;
+    private float currentHitPoints;
+    [SerializeField]
+    private float invinciblityTime;
+    private float invincibleUntil;
 
     [SerializeField]
     private bool hasSword;
@@ -81,15 +90,42 @@ public class PlayerController : MonoBehaviour
         animator.SetTrigger("attack");
     }
 
+    private void Start()
+    {
+        currentHitPoints = maxHitPoints;
+        UpdateHitPoints?.Invoke(currentHitPoints, maxHitPoints);
+    }
+
     private void FixedUpdate()
     {
         velocity = Mathf.Lerp(velocity, walkVelocity * direction, dampening);
-        if (velocity < 0f) spriteRenderer.flipX = true;
-        else if (velocity > 0f) spriteRenderer.flipX = false;
+        if (velocity < 0f) Flip(true);
+        else if (velocity > 0f) Flip(false);
         body.linearVelocityX = velocity;
         animator.SetFloat("speed", Mathf.Abs(velocity));
 
         if (body.linearVelocityY < 0) body.gravityScale = jumpFallGravity;
         else body.gravityScale = jumpRiseGravity;
+    }
+
+    private void Flip(bool left)
+    {
+        Vector3 scale = transform.localScale;
+        float absXScale = Mathf.Abs(scale.x);
+        Vector3 flippedScale;
+        if (left) flippedScale = new Vector3(-absXScale, scale.y, scale.z);
+        else flippedScale = new Vector3(absXScale, scale.y, scale.z);
+        transform.localScale = flippedScale;
+    }
+
+    public void TakeDamage(float damage)
+    {
+        if (Time.time <= invincibleUntil) return;
+        currentHitPoints -= damage;
+        if (currentHitPoints <= 0f)
+        {
+            Destroy(gameObject);
+        }
+        invincibleUntil = Time.time + invinciblityTime;
     }
 }

@@ -644,6 +644,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6239773869721012300}
     m_Modifications:
+    - target: {fileID: 1622745180790133816, guid: e7e83fae98226bc49b8e98a4ec36c7b1, type: 3}
+      propertyPath: col
+      value: 
+      objectReference: {fileID: 615259743794557075}
     - target: {fileID: 3970683097510837656, guid: e7e83fae98226bc49b8e98a4ec36c7b1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -9.92384
@@ -693,6 +697,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7e83fae98226bc49b8e98a4ec36c7b1, type: 3}
+--- !u!61 &615259743794557075 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 8605615022035386636, guid: e7e83fae98226bc49b8e98a4ec36c7b1, type: 3}
+  m_PrefabInstance: {fileID: 9215664729708016031}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5259690909507800071 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3970683097510837656, guid: e7e83fae98226bc49b8e98a4ec36c7b1, type: 3}
