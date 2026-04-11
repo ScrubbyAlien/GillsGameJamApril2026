@@ -1411,20 +1411,32 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1442261582720661028, guid: 68589741c8d12a246823ff427d9afebb, type: 2}
     - target: {fileID: 4734692417444232934, guid: 875173c310d95094dad47ef10004a2df, type: 3}
+      propertyPath: lockPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4734692417444232934, guid: 875173c310d95094dad47ef10004a2df, type: 3}
+      propertyPath: dialogueAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 1c994555a2ad6df45ab6f75f4d4f5829, type: 2}
+    - target: {fileID: 4734692417444232934, guid: 875173c310d95094dad47ef10004a2df, type: 3}
       propertyPath: oneTimeDialogue
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8150185032806065721, guid: 875173c310d95094dad47ef10004a2df, type: 3}
       propertyPath: m_text
-      value: 
+      value: Mayor Dialogue 2
       objectReference: {fileID: 0}
     - target: {fileID: 8150185032806065721, guid: 875173c310d95094dad47ef10004a2df, type: 3}
       propertyPath: m_fontSize
-      value: 0.2
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 8150185032806065721, guid: 875173c310d95094dad47ef10004a2df, type: 3}
       propertyPath: m_fontSizeBase
-      value: 0.2
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8979401162311412092, guid: 875173c310d95094dad47ef10004a2df, type: 3}
+      propertyPath: m_Size.x
+      value: 5.03
       objectReference: {fileID: 0}
     - target: {fileID: 8979401162311412092, guid: 875173c310d95094dad47ef10004a2df, type: 3}
       propertyPath: m_Size.y
@@ -1432,7 +1444,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8979401162311412092, guid: 875173c310d95094dad47ef10004a2df, type: 3}
       propertyPath: m_Offset.x
-      value: -0.4
+      value: 4.21
       objectReference: {fileID: 0}
     - target: {fileID: 8979401162311412092, guid: 875173c310d95094dad47ef10004a2df, type: 3}
       propertyPath: m_Offset.y
