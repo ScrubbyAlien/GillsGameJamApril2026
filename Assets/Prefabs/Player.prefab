@@ -442,6 +442,8 @@ MonoBehaviour:
   body: {fileID: 2733794820901092346}
   animator: {fileID: 8376539018556242123}
   spriteRenderer: {fileID: 781546026263502538}
+  deathEffect: {fileID: 7349497095922420740, guid: 65b934d713aabf94e8bbddfd65bf92b7, type: 3}
+  sceneChanger: {fileID: 0}
   walkVelocity: 7
   dampening: 0.3
   jumpHeight: 3
@@ -450,9 +452,9 @@ MonoBehaviour:
   floorSensor: {fileID: 6642414492953894533}
   jumpCancelledBreakFactor: 0.3
   maxHitPoints: 10
-  invinciblityTime: 2
-  knockBackForce: 20
-  hasSword: 1
+  invinciblityTime: 0.5
+  knockBackForce: 12
+  hasSword: 0
   locked: 0
 --- !u!70 &1539730838596096816
 CapsuleCollider2D:

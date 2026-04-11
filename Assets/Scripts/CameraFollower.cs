@@ -13,7 +13,7 @@ public class CameraFollower : MonoBehaviour
     private float halfHeight => screenHeight / 2;
     private int screenIndex;
     [SerializeField]
-    private float minIndex;
+    private int minIndex;
 
     [SerializeField]
     private float initialX;
@@ -31,6 +31,7 @@ public class CameraFollower : MonoBehaviour
     {
         float levelHeight = playerFeet.position.y + halfHeight;
         screenIndex = Mathf.FloorToInt(levelHeight / screenHeight);
+        if (screenIndex < minIndex) screenIndex = minIndex;
         Vector3 targetPosition = new Vector3(xPos, screenIndex * screenHeight, zPos);
         transform.position = Vector3.Lerp(transform.position, targetPosition, dampening * Time.deltaTime * 100);
     }

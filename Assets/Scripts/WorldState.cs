@@ -21,9 +21,17 @@ public class WorldState : ScriptableObject
         OnTomatoKilled?.Invoke();
     }
 
-    private void OnEnable()
+    public void OnEnable()
     {
         totalTomatoes = 0;
         deadTomatoes = 0;
+    }
+
+    public void KillZone(Collider2D col)
+    {
+        if (col.TryGetComponent<IKillable>(out IKillable killable))
+        {
+            killable.Die();
+        }
     }
 }

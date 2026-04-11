@@ -1,7 +1,8 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Tomato : MonoBehaviour
+public class Tomato : MonoBehaviour, IKillable
 {
     [SerializeField]
     private WorldState worldState;
@@ -26,6 +27,8 @@ public class Tomato : MonoBehaviour
     public bool aggressive = true;
     [SerializeField]
     private UnityEvent OnTurnAggressive;
+    [SerializeField]
+    private UnityEvent OnDeath;
 
     private Transform player;
 
@@ -38,6 +41,12 @@ public class Tomato : MonoBehaviour
     private Hostility hostility;
     private void TurnAggressive()
     {
+        StartCoroutine(TurnWhenPlayerNear());
+    }
+
+    private IEnumerator TurnWhenPlayerNear()
+    {
+        yield return new WaitUntil(() => Vector3.Distance(transform.position, player.position) < 12);
         hostility = Hostility.Hostile;
         worldState.OnTomatoKilled -= TurnAggressive;
         animator.SetTrigger("attack");
@@ -114,10 +123,11 @@ public class Tomato : MonoBehaviour
         transform.localScale = flippedScale;
     }
 
-    private void Die()
+    public void Die()
     {
         worldState.KillTomato(this);
         worldState.OnTomatoKilled -= TurnAggressive;
+        OnDeath?.Invoke();
         Instantiate(splatEffect, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }

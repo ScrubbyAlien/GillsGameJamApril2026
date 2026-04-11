@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : MonoBehaviour, IKillable
 {
     public event Action<float, float> UpdateHitPoints;
     public event Action Interact;
@@ -13,6 +13,10 @@ public class PlayerController : MonoBehaviour
     private Animator animator;
     [SerializeField]
     private SpriteRenderer spriteRenderer;
+    [SerializeField]
+    private ParticleSystem deathEffect;
+    [SerializeField]
+    private SceneChanger sceneChanger;
 
     [Header("Movement")]
     [SerializeField]
@@ -105,6 +109,7 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (locked) direction = 0;
         if (Time.time > invincibleUntil)
         {
             velocity = Mathf.Lerp(velocity, walkVelocity * direction, dampening);
@@ -134,7 +139,7 @@ public class PlayerController : MonoBehaviour
         currentHitPoints -= damage;
         if (currentHitPoints <= 0f)
         {
-            Destroy(gameObject);
+            Die();
             return;
         }
 
@@ -143,6 +148,13 @@ public class PlayerController : MonoBehaviour
         body.linearVelocity += force;
 
         invincibleUntil = Time.time + invinciblityTime;
+    }
+
+    public void Die()
+    {
+        Instantiate(deathEffect, transform.position, Quaternion.identity);
+        gameObject.SetActive(false);
+        sceneChanger.LoadSceneDelayed("Game", 3f);
     }
 
     public void GetSword()
