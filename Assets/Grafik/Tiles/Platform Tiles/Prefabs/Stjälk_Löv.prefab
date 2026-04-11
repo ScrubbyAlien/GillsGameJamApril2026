@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1569448663023807614}
   - component: {fileID: 6496378779261839868}
   - component: {fileID: 3696375533387575037}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "Stja\u0308lk_Lo\u0308v"
   m_TagString: Untagged
   m_Icon: {fileID: 0}

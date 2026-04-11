@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5763518494544242415}
   - component: {fileID: 9027453288204786132}
   - component: {fileID: 810186695882805335}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "Stja\u0308lk_Topp"
   m_TagString: Untagged
   m_Icon: {fileID: 0}

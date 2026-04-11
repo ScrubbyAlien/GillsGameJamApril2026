@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3254638094173911158}
   - component: {fileID: 3475040021121834892}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "Stja\u0308lk_Tjock_0 (3)"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7051008074966420223}
   - component: {fileID: 736170386476202659}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "Stja\u0308lk_Tjock_0 (5)"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -184,7 +184,7 @@ GameObject:
   m_Component:
   - component: {fileID: 892120341498870169}
   - component: {fileID: 7918328649182246236}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "Stja\u0308lk_Tjock_0 (2)"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -270,7 +270,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1733110559386128722}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "Stj\xE4lk 3"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -312,7 +312,7 @@ GameObject:
   m_Component:
   - component: {fileID: 358927365607719525}
   - component: {fileID: 8456697239444150593}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "Stja\u0308lk_Tjock_0 (4)"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -400,7 +400,7 @@ GameObject:
   - component: {fileID: 935505725614524175}
   - component: {fileID: 5179121599512108366}
   - component: {fileID: 4863620640498436907}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "Lo\u0308v_0 (3)"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -533,7 +533,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3089080146124497102}
   - component: {fileID: 5466262729573863155}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "Stja\u0308lk_Tjock_0"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -621,7 +621,7 @@ GameObject:
   - component: {fileID: 6023923863322381719}
   - component: {fileID: 5070356952151720465}
   - component: {fileID: 2367147501555291493}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "Lo\u0308v_0"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -755,7 +755,7 @@ GameObject:
   - component: {fileID: 7531230042302381722}
   - component: {fileID: 5756568118825149304}
   - component: {fileID: 2110321847930562967}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "Lo\u0308v_0 (1)"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -888,7 +888,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5426373874198615877}
   - component: {fileID: 1248903415218033750}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "Stja\u0308lk_Tjock_0 (1)"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -976,7 +976,7 @@ GameObject:
   - component: {fileID: 3753750039012839873}
   - component: {fileID: 6160012519622116494}
   - component: {fileID: 6335193712048428088}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "Lo\u0308v_0 (2)"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
