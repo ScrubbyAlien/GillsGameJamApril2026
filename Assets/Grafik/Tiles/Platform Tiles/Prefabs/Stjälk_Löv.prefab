@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1569448663023807614}
   - component: {fileID: 6496378779261839868}
   - component: {fileID: 3696375533387575037}
+  - component: {fileID: 2382731034356353196}
   m_Layer: 6
   m_Name: "Stja\u0308lk_Lo\u0308v"
   m_TagString: Untagged
@@ -134,3 +135,17 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 5.124789, y: 0.47479153}
   m_EdgeRadius: 0
+--- !u!114 &2382731034356353196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8730476350607718644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 277e038c4a30edc4aa67f0d57802d770, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collider: {fileID: 3696375533387575037}
+  platformBehaviour: 1
