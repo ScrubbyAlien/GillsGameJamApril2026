@@ -17,25 +17,27 @@ MonoBehaviour:
     characterIndex: 0
   - words: I heard the screams...
     characterIndex: 0
-  - words: Did you murder everyone?
+  - words: D-Did you kill everyone?
     characterIndex: 0
   - words: ...
     characterIndex: 0
-  - words: WHAT THE FUCK IS WRONG WITH YOU??
+  - words: Oh...
     characterIndex: 0
-  - words: WHY WOULD YOU DO THAT??
-    characterIndex: 0
-  - words: '*crying*'
-    characterIndex: 0
-  - words: Did you talk to Bob, was that it?
-    characterIndex: 0
-  - words: We kicked him out because he's a maniac!
-    characterIndex: 0
-  - words: You idiot!
+  - words: Holy Tomato...
     characterIndex: 0
   - words: '*cries*'
+    characterIndex: 0
+  - words: The other <color=#d61818><b>warrior</b></color> was about to do that too...
+    characterIndex: 0
+  - words: We kicked him out because he was crazy!
+    characterIndex: 0
+  - words: Oh jeez...
+    characterIndex: 0
+  - words: '*cries again*'
     characterIndex: 0
   - words: That's it I guess.
     characterIndex: 0
   - words: Goodbye Tomato world...
+    characterIndex: 0
+  - words: '*clenches*'
     characterIndex: 0
