@@ -12,6 +12,8 @@ public class Counter : MonoBehaviour
     private TMP_Text counterText;
     [SerializeField]
     private Image icon;
+    [SerializeField]
+    private Image background;
 
     [SerializeField]
     private float fadeTime = 10f;
@@ -63,5 +65,9 @@ public class Counter : MonoBehaviour
         Color iconColor = icon.color;
         iconColor.a = alpha;
         icon.color = iconColor;
+
+        Color bgColor = background.color;
+        bgColor.a = alpha;
+        background.color = bgColor;
     }
 }
