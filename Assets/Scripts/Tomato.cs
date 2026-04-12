@@ -142,7 +142,7 @@ public class Tomato : MonoBehaviour, IKillable
         worldState.OnTomatoKilled -= TurnAggressive;
         OnDeath?.Invoke();
         Instantiate(splatEffect, transform.position, Quaternion.identity);
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 
     public void Launch()
