@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: TalkerDialogueAngry
   m_EditorClassIdentifier: 
   sentences:
-  - words: This is insane, we have to stop them Carl!
+  - words: This is insane, we have to stop them John!
     characterIndex: 0
   - words: That <color=#d61818><b>warrior</b></color> is killing everyone!
     characterIndex: 0
