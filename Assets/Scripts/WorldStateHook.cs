@@ -39,6 +39,7 @@ public class WorldStateHook : MonoBehaviour
         audioSource.Stop();
         audioSource.PlayOneShot(recordScratch);
         audioSource.clip = angry;
+        audioSource.volume *= 2;
         audioSource.PlayDelayed(1f);
     }
 }

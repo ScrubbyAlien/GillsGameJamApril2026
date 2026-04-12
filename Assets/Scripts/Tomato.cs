@@ -142,8 +142,9 @@ public class Tomato : MonoBehaviour, IKillable
 
     public void Launch()
     {
+        launched = true;
         body.constraints = RigidbodyConstraints2D.None;
-        body.AddForce(launchForce, ForceMode2D.Impulse);
+        body.linearVelocity = launchForce;
         body.angularVelocity = Random.Range(-360, -180);
     }
 }

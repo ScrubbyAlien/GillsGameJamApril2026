@@ -15,6 +15,10 @@ public class Counter : MonoBehaviour
     [SerializeField]
     private Image background;
 
+    private float textA;
+    private float iconA;
+    private float backgroundA;
+
     [SerializeField]
     private float fadeTime = 10f;
 
@@ -32,6 +36,10 @@ public class Counter : MonoBehaviour
 
     public void Display()
     {
+        textA = counterText.color.a;
+        iconA = icon.color.a;
+        backgroundA = background.color.a;
+
         gameObject.SetActive(true);
         UpdateCounter();
         StartCoroutine(FadeIn());
@@ -59,15 +67,15 @@ public class Counter : MonoBehaviour
     private void SetAlphas(float alpha)
     {
         Color textColor = counterText.color;
-        textColor.a = alpha;
+        textColor.a = Mathf.Lerp(0, textA, alpha);
         counterText.color = textColor;
 
         Color iconColor = icon.color;
-        iconColor.a = alpha;
+        iconColor.a = Mathf.Lerp(0, iconA, alpha);
         icon.color = iconColor;
 
         Color bgColor = background.color;
-        bgColor.a = alpha;
+        bgColor.a = Mathf.Lerp(0, backgroundA, alpha);
         background.color = bgColor;
     }
 }

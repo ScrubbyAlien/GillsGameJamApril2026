@@ -34,8 +34,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 229.1, y: -0.00062895}
-  m_SizeDelta: {x: 458.2, y: 141.72}
+  m_AnchoredPosition: {x: 198.64, y: -0.00062895}
+  m_SizeDelta: {x: 397.28, y: 141.72}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7233216248701967043
 CanvasRenderer:
@@ -92,8 +92,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 134.8
-  m_fontSizeBase: 134.8
+  m_fontSize: 121.31
+  m_fontSizeBase: 121.31
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -130,7 +130,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 28.46521, y: 0, z: 0, w: 0}
+  m_margin: {x: 33.41333, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -173,8 +173,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -362.01074, y: -146.5036}
-  m_SizeDelta: {x: 724.0215, y: 293.007}
+  m_AnchoredPosition: {x: -309.6953, y: -123.05182}
+  m_SizeDelta: {x: 619.3909, y: 246.1034}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7846493129994194688
 CanvasRenderer:
@@ -214,7 +214,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.77254903}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.54901963}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -367,8 +367,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -137.33, y: 23.413}
-  m_SizeDelta: {x: 256.9781, y: 246.18}
+  m_AnchoredPosition: {x: -129.90788, y: 6.9192}
+  m_SizeDelta: {x: 184.4058, y: 168.6593}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3613793602614667858
 CanvasRenderer:
