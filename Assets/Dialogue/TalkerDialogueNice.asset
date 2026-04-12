@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: TalkerDialogueNice
   m_EditorClassIdentifier: 
   sentences:
-  - words: Caaaaaaaarl...
+  - words: Pssst! Hey John.
     characterIndex: 0
   - words: I need my fix...
     characterIndex: 0
-  - words: I don't have the goods yet...
+  - words: I don't have the goods yet man.
     characterIndex: 1
   - words: But I'm a <color=#06066b><b>Cuddly Tomato</b></color>!
     characterIndex: 0
@@ -25,7 +25,7 @@ MonoBehaviour:
     characterIndex: 0
   - words: Well I don't have the <color=#06066b><b>stuff</b></color> yet.
     characterIndex: 1
-  - words: But Caaaaaaarl...
+  - words: But John...
     characterIndex: 0
   - words: ...
     characterIndex: 0
