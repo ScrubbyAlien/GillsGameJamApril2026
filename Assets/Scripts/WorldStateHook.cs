@@ -14,6 +14,8 @@ public class WorldStateHook : MonoBehaviour
     [SerializeField]
     private UnityEvent OnTurnAggressive;
 
+    private bool inAggressive;
+
     private void Start()
     {
         worldState.OnTomatoKilled += InvokeOnTurnAggressive;
@@ -27,7 +29,9 @@ public class WorldStateHook : MonoBehaviour
     private void InvokeOnTurnAggressive()
     {
         OnTurnAggressive?.Invoke();
+        worldState.OnTomatoKilled -= InvokeOnTurnAggressive;
         SwitchMusic();
+        inAggressive = true;
     }
 
     public void SwitchMusic()

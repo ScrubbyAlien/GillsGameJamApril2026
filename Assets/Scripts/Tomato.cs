@@ -30,6 +30,8 @@ public class Tomato : MonoBehaviour, IKillable
     [SerializeField]
     private UnityEvent OnTurnAggressive;
     [SerializeField]
+    private Vector2 launchForce;
+    [SerializeField]
     private UnityEvent OnDeath;
 
     private Transform player;
@@ -138,10 +140,10 @@ public class Tomato : MonoBehaviour, IKillable
         Destroy(gameObject);
     }
 
-    public void Launch(Vector2 force)
+    public void Launch()
     {
         body.constraints = RigidbodyConstraints2D.None;
-        body.AddForce(force, ForceMode2D.Impulse);
+        body.AddForce(launchForce, ForceMode2D.Impulse);
         body.angularVelocity = Random.Range(-360, -180);
     }
 }
