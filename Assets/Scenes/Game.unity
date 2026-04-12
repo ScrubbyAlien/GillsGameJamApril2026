@@ -15976,6 +15976,7 @@ MonoBehaviour:
   OnLoadScene:
     m_PersistentCalls:
       m_Calls: []
+  sceneOnEscape: MainMenu
 --- !u!4 &1794761502
 Transform:
   m_ObjectHideFlags: 0

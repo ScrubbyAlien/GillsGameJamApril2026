@@ -12,6 +12,9 @@ public class SceneChanger : MonoBehaviour
     [SerializeField]
     private UnityEvent OnLoadScene;
 
+    [SerializeField]
+    private string sceneOnEscape;
+
     private float delay;
 
     public void LoadScene(string name)
@@ -46,5 +49,17 @@ public class SceneChanger : MonoBehaviour
 #else
         Application.Quit();
 #endif
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (sceneOnEscape != "")
+            {
+                delay = 0;
+                LoadScene(sceneOnEscape);
+            }
+        }
     }
 }

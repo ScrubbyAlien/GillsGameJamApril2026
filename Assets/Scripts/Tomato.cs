@@ -73,6 +73,11 @@ public class Tomato : MonoBehaviour, IKillable
         if (aggressive) worldState.OnTomatoKilled += TurnAggressive;
     }
 
+    private void OnDestroy()
+    {
+        if (aggressive) worldState.OnTomatoKilled -= TurnAggressive;
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (hostility == Hostility.Hostile)

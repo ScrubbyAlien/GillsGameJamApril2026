@@ -169,6 +169,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  sceneOnEscape: MainMenu
 --- !u!95 &103859926
 Animator:
   serializedVersion: 7
