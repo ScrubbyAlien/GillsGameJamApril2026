@@ -12,11 +12,19 @@ public class SceneChanger : MonoBehaviour
     [SerializeField]
     private UnityEvent OnLoadScene;
 
+    private float delay;
+
     public void LoadScene(string name)
     {
+        if (delay > 0) LoadSceneDelayed(name, delay);
         OnLoadScene?.Invoke();
         SceneManager.LoadScene(name);
         worldState.OnEnable();
+    }
+
+    public void SetSceneLoadDelay(float delay)
+    {
+        this.delay = delay;
     }
 
     public void LoadSceneDelayed(string name, float delay)
@@ -27,6 +35,7 @@ public class SceneChanger : MonoBehaviour
     private IEnumerator DelayedLoadScene(string name, float delay)
     {
         yield return new WaitForSeconds(delay);
+        delay = 0;
         LoadScene(name);
     }
 

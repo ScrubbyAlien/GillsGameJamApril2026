@@ -1,6 +1,7 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class GetItemScreen : MonoBehaviour
@@ -14,6 +15,9 @@ public class GetItemScreen : MonoBehaviour
     private Image[] images;
     [SerializeField]
     private TMP_Text[] texts;
+
+    [SerializeField]
+    private UnityEvent AfterFadeIn;
 
     private float currentAlpha;
     public bool fading { get; private set; }
@@ -39,6 +43,9 @@ public class GetItemScreen : MonoBehaviour
         }
         currentAlpha = 1;
         SetAlphas(currentAlpha);
+
+        AfterFadeIn?.Invoke();
+
         yield return new WaitForSeconds(lingerTime);
 
         while (currentAlpha > 0)

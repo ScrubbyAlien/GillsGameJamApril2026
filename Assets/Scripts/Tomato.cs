@@ -34,6 +34,8 @@ public class Tomato : MonoBehaviour, IKillable
 
     private Transform player;
 
+    private bool launched;
+
     public enum Hostility
     {
         Hostile,
@@ -88,6 +90,7 @@ public class Tomato : MonoBehaviour, IKillable
 
     private void FixedUpdate()
     {
+        if (launched) return;
         UpdateDirection();
         float velocity = direction * walkSpeed;
         rotation = velocity / body.GetComponent<CircleCollider2D>().radius;
@@ -133,5 +136,12 @@ public class Tomato : MonoBehaviour, IKillable
         OnDeath?.Invoke();
         Instantiate(splatEffect, transform.position, Quaternion.identity);
         Destroy(gameObject);
+    }
+
+    public void Launch(Vector2 force)
+    {
+        body.constraints = RigidbodyConstraints2D.None;
+        body.AddForce(force, ForceMode2D.Impulse);
+        body.angularVelocity = Random.Range(-360, -180);
     }
 }
